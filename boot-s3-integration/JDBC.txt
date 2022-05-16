@@ -1,0 +1,68 @@
+												JDBC API
+												========
+													
+java.sql
+--------
+
+Classes 					
+-------						
+Driver Manager				
+DriverPropertyInfo	
+SQLPermission
+Date
+Time	
+Timestamp	
+Types
+
+
+Interfaces
+----------
+-Connection
+-Statement
+-Prepared Statement
+-Callable Statement
+-Result Set
+-Result SetMetadata
+-DataBaseMetaData
+....
+....
+
+Connection:
+===========
+=>It is used to establish a connection with a specified database. 
+=>SQL statements are executed and results are returned within the context of a connection.
+
+Statement:
+=========
+=>The java.sql.Statement interface is a public abstract interface. 
+=>It is the object that is used to execute a static SQL statement and obtain the results of the execution.
+
+Subinterfaces:
+-------------
+▪CallableStatement
+▪PreparedStatement
+
+CallableStatement
+==================
+=>This interface is intended to support calling database stored procedures. 
+=>Thus, the solidDB stored procedures are used in JDBC in the same way as any statement.
+
+PreparedStatement
+=================
+=>The PreparedStatement interface is a subinterface of Statement. 
+=>It is used to execute parameterized query.
+
+Methods:
+=>execute(): This returns a boolean value and executes a static SQL statement that is present in the prepared statement object.	
+=>executeUpdate():	executes the query. It is used for create, drop, insert, update, delete etc.
+=>executeQuery():	executes the select query. It returns an instance of ResultSet.
+
+								
+								
+
+
+
+
+
+
+

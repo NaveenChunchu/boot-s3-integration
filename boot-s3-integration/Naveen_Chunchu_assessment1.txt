@@ -1,0 +1,237 @@
+Solution-->2
+==========
+
+Strings:  
+
+public class Strings {
+	
+	public static void main(String[] args) {
+		
+		String str ="n_v__n";
+		
+	  String str2 = str.replaceAll("_","%20");
+		System.out.println(str2);
+		
+	}
+
+}
+
+===============================================================================================================================
+
+
+
+solution-->1
+==========
+
+
+EnergyLevek Class
+----------------------
+
+public class EnergyLevel {
+
+int energyLevel = 100;
+ int throwSomething = 5;
+ int eatBananas = 10;
+ int climb = 10;
+		
+	
+	public int Energy() {
+		
+	return 0;
+	}
+	public void displayEnergy() {
+		System.out.println("Energy Level Of A Mammal --> " +energyLevel);
+	}
+	
+	public void throwsSomething() {
+		
+		energyLevel -=throwSomething ;
+		System.out.println("the gorilla has throwSomething, as well as decrease the energy level by 5");
+		System.out.println("After ThrowSomething The Energy Level of Gorilla ---> "+energyLevel);
+	}
+	public void eatBananas() {
+		energyLevel +=eatBananas;
+		System.out.println("eat Banana then the gorilla's satisfaction increase its energy by 10");
+		System.out.println("After Eating Banana The Energy Level Of Gorilla --> " +energyLevel );
+	}
+	public void climb() {
+		energyLevel -=climb;
+		System.out.println("The gorilla Has climbed a tree and decrease its energy by 10");
+		System.out.println("After climbing a tree The energy Level of Gorilla --> " +energyLevel);
+	}
+	
+}
+
+Mammal Class
+----------------
+public class Mammal extends EnergyLevel {
+	
+	public static void main(String[] args){
+		
+		Mammal m;
+		m = new Mammal();
+		m.displayEnergy();
+}
+}
+		
+
+
+GorillaClass
+--------------
+public class Gorilla extends EnergyLevel {
+
+public static void main(String[] args) {
+
+     int throwSomething = 5;
+    int eatBanana = 10;
+     int climb = 10;
+		
+          Gorilla g = new Gorilla();
+        g.throwsSomething();
+         g.eatBananas();
+           g.climb();
+}
+
+}
+
+==================================================================================================================================================
+
+solution-->3
+==========
+Account Class
+----------------
+
+public class Accounts {
+	
+	private String name;
+	private String mailId;
+	private long mobNo;
+	private String accType;
+	private double balance;
+	long accNum;
+	
+	
+	public Accounts() {
+		
+	}
+
+	public Accounts(String name, String mailId, long mobNo, String accType, double balance) {
+		super();
+		this.name = name;
+		this.mailId = mailId;
+		this.mobNo = mobNo;
+		this.accType = accType;
+		this.balance = balance;
+	    this.accNum = accNum;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getMailId() {
+		return mailId;
+	}
+
+	public void setMailId(String mailId) {
+		this.mailId = mailId;
+	}
+
+	public long getMobNo() {
+		return mobNo;
+	}
+
+	public void setMobNo(long mobNo) {
+		this.mobNo = mobNo;
+	}
+
+	public String getAccType() {
+		return accType;
+	}
+
+	public void setAccType(String accType) {
+		this.accType = accType;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	public double getAccNum() {
+		return accNum;
+	}
+
+	public void setAccNum(long accNum) {
+		this.accNum = accNum;
+	}
+
+
+	
+	public String toString() {
+		
+		return "Accounts [name=" + name + ", mailId=" + mailId + ", mobNo=" + mobNo + ", accType=" + accType
+				+ ", balance=" + balance + ", accountnumber " +accNum+  "]";
+	}
+
+
+}
+
+
+Bank Class
+-------------
+public class Bank {
+
+	public static void main(String[] args) {
+
+		Account acc1 = new Account("Mic","mic@12.com",89765644l,"savings",45000);
+		Account acc2 = new Account("Jhon","jhon@12.com",8976565744l,"savings",50000);
+		Account acc3 = new Account("Bob","bob@12.com",657485744l,"savings",20000);
+		
+     	
+                              Random rand = new Random();
+		    long accno = 0;
+		    for (int i = 0; i < 7; i++)
+		    {
+		        int n = rand.nextInt(10) ;
+		         accNum = accno.charAt(i);
+		        System.out.print(accNum);
+                                }
+		
+		
+		AccountService service = acc1;
+    	System.out.println("The Amount in acc1 before deposite: "+acc1.getBalance());
+		
+		
+		System.out.println(" The amount in acc1 After deposite: " +acc1.getBalance());
+		System.out.println();
+		
+		
+		
+		service = acc2;
+		System.out.println("The Amount Before WithDraw "+acc2.getBalance());
+		
+		System.out.println("The Amount After Completion Of WithDraw: "+acc2.getBalance());
+		System.out.println();
+	   
+		
+		
+		service = acc3;
+		System.out.println("Account state Before Transfer:  ");
+		System.out.println(acc2.getFullName() + "  $" + acc2.getBalance());
+		System.out.println(acc3.getFullName() + "  $" + acc3.getBalance());
+		
+		System.out.println("Account State After Transfer:  ");
+		System.out.println(acc2.getFullName() + "  $" + acc2.getBalance());
+		System.out.println(acc3.getFullName() + "  $" + acc3.getBalance());
+		
+
+	}
+
+}
